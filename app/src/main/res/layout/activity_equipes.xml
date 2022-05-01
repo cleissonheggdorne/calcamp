@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/equipesfundo"
+    android:orientation="vertical"
+    tools:context=".activities.equipes">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/calcularQueda"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:onClick="verificaEntradaNew"
+                            android:text="@string/calcular_queda"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/custom_button"
+                            app:layout_constraintEnd_toEndOf="@+id/adView"
+                            app:layout_constraintStart_toStartOf="@+id/adView"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe12" />
+
+                        <com.google.android.gms.ads.AdView
+                            android:id="@+id/adView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            app:adSize="BANNER"
+                            app:adUnitId="@string/admob_meu"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/calcularQueda"
+                            app:layout_constraintVertical_bias="0.0">
+
+                        </com.google.android.gms.ads.AdView>
+
+                        <TextView
+                            android:id="@+id/fraseTopoTela"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/queda1Equipes"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/font_modular"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:checkedButton="@+id/onlbffNova"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="@+id/fraseTopoTela"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/fraseTopoTela"
+                            app:layout_constraintTop_toBottomOf="@+id/fraseTopoTela">
+
+                                <RadioButton
+                                    android:id="@+id/onlbffAntiga"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:onClick="onRadioButtonClicked"
+                                    android:text="@string/lbff_antiga"
+                                    android:textColor="#ffffff" />
+
+                                <RadioButton
+                                    android:id="@+id/onlbffNova"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="onRadioButtonClicked"
+                                    android:text="@string/lbff_nova"
+                                    android:textColor="#ffffff" />
+
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/Equipe1"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="30dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe1"
+                            android:drawableStart="@drawable/ic_group"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe2"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toEndOf="@+id/tv1"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe2"
+                            app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+
+                        <EditText
+                            android:id="@+id/Equipe2"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe2"
+                            android:drawableStart="@drawable/ic_group"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe3"
+                            app:layout_constraintStart_toEndOf="@+id/tv2"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe3"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe1" />
+
+                        <EditText
+                            android:id="@+id/Equipe3"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe3"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:drawableStart="@drawable/ic_group"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe4"
+                            app:layout_constraintStart_toEndOf="@+id/tv3"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe4"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe2" />
+
+                        <EditText
+                            android:id="@+id/Equipe4"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe4"
+                            android:drawableStart="@drawable/ic_group"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe5"
+                            app:layout_constraintStart_toEndOf="@+id/tv4"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe5"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe3" />
+
+                        <EditText
+                            android:id="@+id/Equipe5"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe5"
+                            android:inputType="none|text"
+                            android:drawableStart="@drawable/ic_group"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe6"
+                            app:layout_constraintHorizontal_bias="0.96"
+                            app:layout_constraintStart_toEndOf="@+id/tv5"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe6"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe4" />
+
+                        <EditText
+                            android:id="@+id/Equipe6"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe6"
+                            android:inputType="none|text"
+                            android:drawableStart="@drawable/ic_group"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintStart_toEndOf="@+id/tv6"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe7"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe5" />
+
+                        <EditText
+                            android:id="@+id/Equipe7"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe7"
+                            android:drawableStart="@drawable/ic_group"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe8"
+                            app:layout_constraintStart_toEndOf="@+id/tv7"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe8"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe6" />
+
+                        <EditText
+                            android:id="@+id/Equipe8"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe8"
+                            android:drawableStart="@drawable/ic_group"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe9"
+                            app:layout_constraintStart_toEndOf="@+id/tv8"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe9"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe7" />
+
+                        <EditText
+                            android:id="@+id/Equipe9"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe9"
+                            android:inputType="none|text"
+                            android:drawableStart="@drawable/ic_group"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe10"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe11"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe8" />
+
+                        <EditText
+                            android:id="@+id/Equipe10"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe10"
+                            android:inputType="none|text"
+                            android:drawableStart="@drawable/ic_group"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe11"
+                            app:layout_constraintStart_toEndOf="@+id/tv10"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe11"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe9" />
+
+                        <EditText
+                            android:id="@+id/Equipe11"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe11"
+                            android:inputType="none|text"
+                            android:drawableStart="@drawable/ic_group"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/Equipe12"
+                            app:layout_constraintStart_toStartOf="@+id/Equipe12"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe10" />
+
+                        <EditText
+                            android:id="@+id/Equipe12"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:autofillHints=""
+                            android:hint="@string/Equipe12"
+                            android:drawableStart="@drawable/ic_group"
+                            android:inputType="none|text"
+                            android:textAlignment="center"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintEnd_toEndOf="@+id/calcularQueda"
+                            app:layout_constraintStart_toStartOf="@+id/calcularQueda"
+                            app:layout_constraintTop_toBottomOf="@+id/Equipe11" />
+
+                        <EditText
+                            android:id="@+id/edtkill1"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="35dp"
+                            android:autofillHints=""
+                            android:hint="@string/kill1"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe1"
+                            app:layout_constraintEnd_toEndOf="@+id/fraseTopoTela"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe1" />
+
+                        <EditText
+                            android:id="@+id/edtkill2"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill2"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe2"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill1"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe2" />
+
+                        <EditText
+                            android:id="@+id/edtkill3"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill3"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe3"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill2"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe3" />
+
+                        <EditText
+                            android:id="@+id/edtkill4"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill4"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe4"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill3"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe4" />
+
+                        <EditText
+                            android:id="@+id/edtkill5"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill5"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe5"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill4"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe5" />
+
+                        <EditText
+                            android:id="@+id/edtkill6"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill6"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe6"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill5"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe6" />
+
+                        <EditText
+                            android:id="@+id/edtkill7"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill7"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe7"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill6"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe7" />
+
+                        <EditText
+                            android:id="@+id/edtkill8"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill8"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe8"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill7"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe8" />
+
+                        <EditText
+                            android:id="@+id/edtkill9"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill9"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe9"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill8"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe9" />
+
+                        <EditText
+                            android:id="@+id/edtkill10"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill10"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe10"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill9"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe10" />
+
+                        <EditText
+                            android:id="@+id/edtkill11"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill11"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe11"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill10"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe11" />
+
+                        <EditText
+                            android:id="@+id/edtkill12"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="@string/kill12"
+                            android:textAlignment="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe12"
+                            app:layout_constraintEnd_toEndOf="@+id/edtkill11"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/Equipe12" />
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="35dp"
+                            android:text="@string/_1"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe1"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe1"
+                            app:layout_constraintStart_toStartOf="@+id/fraseTopoTela" />
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_2"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe2"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe2"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv1" />
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_3"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe3"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe3"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv2" />
+
+                        <TextView
+                            android:id="@+id/tv4"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_4"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe4"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe4"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv3" />
+
+                        <TextView
+                            android:id="@+id/tv5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_5"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe5"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe5"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv4" />
+
+                        <TextView
+                            android:id="@+id/tv6"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_6"
+                            android:textColor="@color/color1"
+                            android:textColorHint="#81C9D0CC"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe6"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe6"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv5" />
+
+                        <TextView
+                            android:id="@+id/tv7"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_7"
+                            android:textColor="@color/color1"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe7"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe7"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv6" />
+
+                        <TextView
+                            android:id="@+id/tv8"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_8"
+                            android:textColor="@color/color1"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe8"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe8"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv7" />
+
+                        <TextView
+                            android:id="@+id/tv9"
+                            android:layout_width="26dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_9"
+                            android:textColor="@color/color1"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe9"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe9"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv8"/>
+
+                        <TextView
+                            android:id="@+id/tv10"
+                            android:layout_width="40dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_10"
+                            android:textColor="@color/color1"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe10"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe10"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv9" />
+
+                        <TextView
+                            android:id="@+id/tv11"
+                            android:layout_width="40dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_11"
+                            android:textColor="@color/color1"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe11"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe11"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv10" />
+
+                        <TextView
+                            android:id="@+id/tv12"
+                            android:layout_width="40dp"
+                            android:layout_height="33dp"
+                            android:text="@string/_12"
+                            android:textColor="@color/color1"
+                            android:textSize="25sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/Equipe12"
+                            app:layout_constraintEnd_toStartOf="@+id/Equipe12"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/tv11" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

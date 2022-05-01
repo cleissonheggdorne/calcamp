@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.calculadora.calcamp">
+
+    <uses-permission android:name="string" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CALCAMP"
+        android:roundIcon="@mipmap/ic_launcher_oficial"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".activities.ajuda"></activity>
+        <activity android:name=".tipo_pontuacao" />
+        <activity android:name=".activities.Main2Activity" />
+        <activity
+            android:name=".activities.ProximasQuedas"
+            android:label="Próxima Queda"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".activities.resultado"
+            android:label="RESULTADO"
+            android:screenOrientation="locked" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/activity_calculo_queda" />
+
+        <activity
+            android:name=".activities.Equipes"
+            android:label="Equipes Queda 1"
+            android:screenOrientation="locked" />
+        <activity android:name=".activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9897683100163895~5248973317" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

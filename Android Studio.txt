@@ -1,0 +1,35 @@
+Arquivo XML 
+Linguagem de Marcação Extensiva ou "Extensible Murkup Language"
+Uma forma de descrever a aparência do app
+
+IDE
+Ambiente de Desenvolvimento Integrado
+
+Sintaxe XML 
+-OS blocos são sempre começados com "<"seguido do nome da view e terminados com "/>"
+-Abaixo vem a lista de atributos. Um abaixo do outro.
+<TextView
+android:text="Olá Mundo"                              IMPRIME NA TELA EM FORMATO DE TEXTO
+android:backgorund = "@android:color/darker_gray"     COR DE FUNDO
+android:layout_width = "150dp"                        LArgura medida de dp
+android:layout_height="75dp" Altura medida em dp/>
+
+NOTE QUE HÁ UM "android:" seguido do atributo, seguido por "=" e o valor do atributo entre aspas duplas(")
+
+<LinearLayout> Aqui vemos a abertura de um tipo de Layout
+bloco
+</LinearLayout> E aqui o fechamento do Layout, repare que a tag é a mesma, só muda a adição da barra
+
+
+android:textSize="45dp" -> Tamanho do texto
+android:textColor="#000000" ->Cor do Texto
+android:background="#000000" ->Cor de fundo do texto
+
+<ImageView
+android:src="@drawable/cake" caminho de uma imagem
+android:layout_width = "wrap_content"
+android:layout_height= "wrap_content"
+android:scaleType="center"/> 
+
+center = centro da imagem  
+centerCrop -> Reduz a imagem para ajustar a altura e largura da biew

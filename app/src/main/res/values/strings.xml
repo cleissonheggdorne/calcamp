@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">MyFirstApplication</string>
+    <string name="iniciar">INICIAR</string>
+
+    <string name="pt1">pt</string>
+    <string name="pt2">pt</string>
+    <string name="pt3">pt</string>
+    <string name="pt4">pt</string>
+    <string name="pt5">pt</string>
+    <string name="pt6">pt</string>
+    <string name="pt7">pt</string>
+    <string name="pt8">pt</string>
+    <string name="pt9">pt</string>
+    <string name="pt10">pt</string>
+    <string name="pt11">pt</string>
+    <string name="pt12">pt</string>
+
+    <string name="outra_queda">Outra Queda</string>
+    <string name="calcular_queda">Calcular Queda</string>
+    <string name="queda1Equipes">INSIRA O NOME DAS EQUIPES NA ORDEM DE POSIÇÃO E OS ABATES NA QUEDA 1:</string>
+    <string name="lbff_antiga">LBFF ANTIGA</string>
+    <string name="lbff_nova">LBFF NOVA</string>
+
+    <string name="_1">1º</string>
+    <string name="_2">2º</string>
+    <string name="_3">3º</string>
+    <string name="_4">4º</string>
+    <string name="_5">5º</string>
+    <string name="_6">6º</string>
+    <string name="_7">7º</string>
+    <string name="_8">8º</string>
+    <string name="_9">9º</string>
+    <string name="_10">10º</string>
+    <string name="_11">11º</string>
+    <string name="_12">12º</string>
+
+    <string name="Equipe1">Equipe 1</string>
+    <string name="Equipe2">Equipe 2</string>
+    <string name="Equipe3">Equipe 3</string>
+    <string name="Equipe4">Equipe 4</string>
+    <string name="Equipe5">Equipe 5</string>
+    <string name="Equipe6">Equipe 6</string>
+    <string name="Equipe7">Equipe 7</string>
+    <string name="Equipe8">Equipe 8</string>
+    <string name="Equipe9">Equipe 9</string>
+    <string name="Equipe10">Equipe 10</string>
+    <string name="Equipe11">Equipe 11</string>
+    <string name="Equipe12">Equipe 12</string>
+
+    <string name="kill1">kill</string>
+    <string name="kill2">kill</string>
+    <string name="kill3">kill</string>
+    <string name="kill4">kill</string>
+    <string name="kill5">kill</string>
+    <string name="kill6">kill</string>
+    <string name="kill7">kill</string>
+    <string name="kill8">kill</string>
+    <string name="kill9">kill</string>
+    <string name="kill10">kill</string>
+    <string name="kill11">kill</string>
+    <string name="kill12">kill</string>
+
+    <string name="pos1">Pos</string>
+    <string name="pos2">Pos</string>
+    <string name="pos3">Pos</string>
+    <string name="pos4">Pos</string>
+    <string name="pos5">Pos</string>
+    <string name="pos6">Pos</string>
+    <string name="pos7">Pos</string>
+    <string name="pos8">Pos</string>
+    <string name="pos9">Pos</string>
+    <string name="pos10">Pos</string>
+    <string name="pos11">Pos</string>
+    <string name="pos12">Pos</string>
+    <string name="calcular">Calcular</string>
+    <string name="fraseTopoTela">INSIRA A POSIÇÃO E ABATES:</string>
+    <string name="string_insira_a_posi_o_na_queda_e_abates" />
+    <string name="equipe_1">Equipe 1</string>
+    <string name="frasemain">Calculadora de X-Treinos e Campeonatos FREEFIRE</string>
+    <string name="classificacao">CLASSIFICAÇÃO</string>
+
+    <string name="rankresultado">Rank</string>
+    <string name="killresultado">Abates</string>
+    <string name="pontuacaoresultado">Pontos</string>
+    <string name="posicao">Posição</string>
+    <string name="equipe">Equipe</string>
+
+    <string name="admob_meu">ca-app-pub-9897683100163895/4621205786</string>
+    <string name="admob_google_teste">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="tipopontuacao">Tipo de Pontuação</string>
+    <string name="comousar">Ajuda</string>
+
+    <string name="passo1">Toque em "INICIAR".</string>
+    <string name="passo2">Escolha o tipo de pontuação.
+        Em seguida adicione as equipes e seus abates na devida
+    ordem de posição na queda.
+    Feito isso, toque em "CALCULAR".</string>
+    <string name="passo3">O resultado será mostrado.
+    Caso tenha mais de uma queda,
+    basta tocar em "OUTRA QUEDA"</string>
+    <string name="passo4">Na tela seguinte,
+    coloque a posição e os abates de cada equipe.
+    Feito isso, toque em "CALCULAR"</string>
+
+
+</resources>

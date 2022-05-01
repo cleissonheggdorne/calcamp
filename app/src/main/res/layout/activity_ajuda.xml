@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tipo_pontuacao"
+    android:background="@drawable/primeiratela">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iniciar"
+                android:layout_width="236dp"
+                android:layout_height="352dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/iniciar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv1ajuda" />
+
+            <ImageView
+                android:id="@+id/equies1queda"
+                android:layout_width="236dp"
+                android:layout_height="352dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/equipes1queda"
+                app:layout_constraintEnd_toEndOf="@+id/tv2ajuda"
+                app:layout_constraintStart_toStartOf="@+id/tv2ajuda"
+                app:layout_constraintTop_toBottomOf="@+id/tv2ajuda" />
+
+            <ImageView
+                android:id="@+id/resultado"
+                android:layout_width="236dp"
+                android:layout_height="352dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/resultado"
+                app:layout_constraintEnd_toEndOf="@+id/tv3ajuda"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="@+id/tv3ajuda"
+                app:layout_constraintTop_toBottomOf="@+id/tv3ajuda" />
+
+            <ImageView
+                android:id="@+id/queda2oumais"
+                android:layout_width="236dp"
+                android:layout_height="352dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/queda2oumais"
+                app:layout_constraintEnd_toEndOf="@+id/tv4ajuda"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="@+id/tv4ajuda"
+                app:layout_constraintTop_toBottomOf="@+id/tv4ajuda" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewajuda2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                app:adSize="BANNER"
+                app:adUnitId="@string/admob_meu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/queda2oumais">
+
+            </com.google.android.gms.ads.AdView>
+
+            <TextView
+                android:id="@+id/tv1ajuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="185dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="170dp"
+                android:text="@string/passo1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv2ajuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/passo2"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iniciar" />
+
+            <TextView
+                android:id="@+id/tv3ajuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/passo3"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/equies1queda" />
+
+            <TextView
+                android:id="@+id/tv4ajuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/passo4"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultado" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

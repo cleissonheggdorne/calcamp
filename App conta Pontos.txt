@@ -1,0 +1,9 @@
+Será um app de contagem de pontos de um x treino.
+Precisaremos: 
+Antes da colocação da Pontuação REAL,
+-Números de Pontos do 1º ao 12º lugar (Que deve ficar salvo no app para posterior uso)
+-Cadastro do nome das 12 equipes paricipantes do Xtreino/Camp
+-O usuário informará a posição em que cada equipe ficou
+-O usuário informará o número de kills de cada equipe
+-O usuário informará o MVP (Jogador que fez mais kills)
+
